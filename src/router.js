@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import HelloWorld from '@/components/HelloWorld'
-import BasicInformationPage from '@/components/BasicInformationPage'
-import QuestionnairePage from '@/components/QuestionnairePage'
-import ConsultationPage from '@/components/ConsultationPage'
+import BasicInformationPage from '@/components/modules/BasicInformationPage'
+import QuestionnairePage from '@/components/modules/QuestionnairePage'
+import ConsultationPage from '@/components/modules/ConsultationPage'
 
 Vue.use(Router)
 
