@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import HelloWorld from '@/components/HelloWorld'
 import BasicInformationPage from '@/components/modules/BasicInformationPage'
 import QuestionnairePage from '@/components/modules/QuestionnairePage'
 import ConsultationPage from '@/components/modules/ConsultationPage'
@@ -13,10 +12,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: HelloWorld
-    },
-    {
-      path: '/basic',
       component: BasicInformationPage
     },
     {

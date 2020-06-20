@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <h1>Basic</h1>
+    <h2>お客様の情報を入力してください</h2>
     <form @submit.prevent="ToQuestionPage">
       <div>
-        <h3><label for="">-性別</label></h3>
+        <h3><label>-性別</label></h3>
         <input type="radio" value="男" v-model="gender"> 男
         <input type="radio" value="女" v-model="gender"> 女
       </div>
@@ -24,12 +24,6 @@ export default {
   methods: {
     ToQuestionPage() {
       this.$router.push("/question");
-    },
-    changeGender(e) {
-      this.$store.commit("genderValue", e.target.value)
-    },
-    inputDate(e){
-      this.$store.commit("dateValue", e.target.value)
     }
   },
   computed: {
@@ -40,7 +34,6 @@ export default {
     gender:{
       get() { return this.$store.getters.gender },
       set(value){ this.$store.dispatch('setGender', value)}
-
     }
   }
 

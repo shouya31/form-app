@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    show1: false,
-    show2: false,
-    RadioOption1: "",
-    RadioOption2: "",
-    RadioOption3: "",
+    showQuestion1: false,
+    showQuestion2: false,
+    question1: "",
+    question2: "",
+    question3: "",
     gender: "",
     date: "",
     text: ""
@@ -17,22 +17,18 @@ const store = new Vuex.Store({
   mutations: {
     valueChange(state, value){
       if ( value === "Yes1" || value === "No1" ){
-        state.show1 = true
-        state.RadioOption1 = value
-
+        state.showQuestion1 = true
+        state.question1 = value
       }
       else if ( value === "Yes2" || value === "No2" ){
-        state.show2 = true
-        state.RadioOption2 = value
+        state.showQuestion2 = true
+        state.question2 = value
       }
       else if ( value === "Yes3" || value === "No3" ){
-        state.show3 = true
-        state.RadioOption3 = value
+        state.question3 = value
       }
     },
     genderValue(state, value){
-      console.log(value);
-
       state.gender = value
     },
     dateValue(state, value){
@@ -43,23 +39,20 @@ const store = new Vuex.Store({
     }
   },
   getters: {
-    show1(state){
-      return state.show1
+    showQuestion1(state){
+      return state.showQuestion1
     },
-    show2(state){
-      return state.show2
+    showQuestion2(state){
+      return state.showQuestion2
     },
-    show3(state){
-      return state.show3
+    question1(state){
+      return state.question1
     },
-    RadioOption1(state){
-      return state.RadioOption1
+    question2(state){
+      return state.question2
     },
-    RadioOption2(state){
-      return state.RadioOption2
-    },
-    RadioOption3(state){
-      return state.RadioOption3
+    question3(state){
+      return state.question3
     },
     gender(state){
       return state.gender
@@ -78,22 +71,19 @@ const store = new Vuex.Store({
     setDate({commit}, value){
       commit('dateValue', value )
     },
-    setshow1({commit}, value){
+    setShowQuestion1({commit}, value){
       commit('valueChange', value)
     },
-    setshow2({commit}, value){
+    setShowQuestion2({commit}, value){
       commit('valueChange', value)
     },
-    setshow3({commit}, value){
+    setQuestion1({commit}, value){
       commit('valueChange', value)
     },
-    setRadioOption1({commit}, value){
+    setQuestion2({commit}, value){
       commit('valueChange', value)
     },
-    setRadioOption2({commit}, value){
-      commit('valueChange', value)
-    },
-    setRadioOption3({commit}, value){
+    setQuestion3({commit}, value){
       commit('valueChange', value)
     },
     setText({commit}, value){
