@@ -15,7 +15,7 @@ const store = new Vuex.Store({
     text: ""
   },
   mutations: {
-    valueChange(state, value){
+    changeQuestionValue(state, value){
       if ( value === "Yes1" || value === "No1" ){
         state.showQuestion1 = true
         state.question1 = value
@@ -28,13 +28,13 @@ const store = new Vuex.Store({
         state.question3 = value
       }
     },
-    genderValue(state, value){
+    changeGenderValue(state, value){
       state.gender = value
     },
-    dateValue(state, value){
+    changeDateValue(state, value){
       state.date = value
     },
-    textValue(state, value){
+    changeTextValue(state, value){
       state.text = value
     }
   },
@@ -63,34 +63,7 @@ const store = new Vuex.Store({
     text(state){
       return state.text
     }
-  },
-  actions: {
-    setGender({commit}, value){
-      commit('genderValue', value )
-    },
-    setDate({commit}, value){
-      commit('dateValue', value )
-    },
-    setShowQuestion1({commit}, value){
-      commit('valueChange', value)
-    },
-    setShowQuestion2({commit}, value){
-      commit('valueChange', value)
-    },
-    setQuestion1({commit}, value){
-      commit('valueChange', value)
-    },
-    setQuestion2({commit}, value){
-      commit('valueChange', value)
-    },
-    setQuestion3({commit}, value){
-      commit('valueChange', value)
-    },
-    setText({commit}, value){
-      commit('textValue', value)
-    }
-  },
-
+  }
 })
 
 export default store

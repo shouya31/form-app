@@ -17,7 +17,7 @@ export default {
   computed: {
     writeText: {
       get() {return this.$store.state.text},
-      set(value){ this.$store.dispatch('setText', value)}
+      set(value){ this.$store.commit('changeTextValue', value)}
     }
   }
 }

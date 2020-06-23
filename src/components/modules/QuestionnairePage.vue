@@ -34,23 +34,23 @@ export default {
   computed: {
     showQuestion1:{
       get(){ return this.$store.getters.showQuestion1 },
-      set(value){ this.$store.dispatch('setShowQuestion1', value)}
+      set(value){ this.$storecommit('changeQuestionValue', value)}
     },
     showQuestion2:{
       get(){ return this.$store.getters.showQuestion2 },
-      set(value){ this.$store.dispatch('setShowQuestion2', value)}
+      set(value){ this.$store.commit('changeQuestionValue', value)}
     },
     question1:{
       get(){ return this.$store.getters.question1 },
-      set(value){ this.$store.dispatch('setQuestion1', value)}
+      set(value){ this.$store.commit('changeQuestionValue', value)}
     },
     question2:{
       get(){ return this.$store.getters.question2 },
-      set(value){ this.$store.dispatch('setQuestion2', value)}
+      set(value){ this.$store.commit('changeQuestionValue', value)}
     },
     question3:{
       get(){ return this.$store.getters.question3 },
-      set(value){ this.$store.dispatch('setQuestion3', value)}
+      set(value){ this.$store.commit('changeQuestionValue', value)}
     },
   }
 }

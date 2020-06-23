@@ -29,11 +29,11 @@ export default {
   computed: {
     date: {
       get() { return this.$store.getters.date },
-      set(value){ this.$store.dispatch('setDate', value)}
+      set(value){ this.$store.commit('changeDateValue', value )}
     },
     gender:{
       get() { return this.$store.getters.gender },
-      set(value){ this.$store.dispatch('setGender', value)}
+      set(value){ this.$store.commit('changeGenderValue', value )}
     }
   }
 
