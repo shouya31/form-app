@@ -1,19 +1,24 @@
 <template>
   <div>
     <h2>ご相談内容を入力ください</h2>
-    <form>
+    <form @submit.prevent="ToConfirmationPage">
       <div>
         <p><label for="">ご相談内容</label></p>
         <textarea name="" id="" cols="30" rows="10" v-model="writeText"></textarea>
       </div>
+      <button type="submit">次へ</button>
+      <button @click="$router.go(-1)">戻る</button>
     </form>
-    <router-link to="/">次へ</router-link>
-    <button @click="$router.go(-1)">戻る</button>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    ToConfirmationPage() {
+      this.$router.push("/confirmation");
+    }
+  },
   computed: {
     writeText: {
       get() {return this.$store.state.text},

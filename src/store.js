@@ -15,18 +15,16 @@ const store = new Vuex.Store({
     text: ""
   },
   mutations: {
-    changeQuestionValue(state, value){
-      if ( value === "Yes1" || value === "No1" ){
-        state.showQuestion1 = true
-        state.question1 = value
-      }
-      else if ( value === "Yes2" || value === "No2" ){
-        state.showQuestion2 = true
-        state.question2 = value
-      }
-      else if ( value === "Yes3" || value === "No3" ){
-        state.question3 = value
-      }
+    changeQuestion1Value(state, value){
+      state.question1 = value
+      state.showQuestion1 = true
+    },
+    changeQuestion2Value(state, value){
+      state.question2 = value
+      state.showQuestion2 = true
+    },
+    changeQuestion3Value(state, value){
+      state.question3 = value
     },
     changeGenderValue(state, value){
       state.gender = value
