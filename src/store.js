@@ -26,19 +26,6 @@ const store = new Vuex.Store({
     changeQuestion3Value(state, value){
       state.question3 = value
     },
-    // changeQuestionValue(state, value){
-    //   if ( value === "Yes1" || value === "No1" ){
-    //     state.showQuestion1 = true
-    //     state.question1 = value
-    //   }
-    //   else if ( value === "Yes2" || value === "No2" ){
-    //     state.showQuestion2 = true
-    //     state.question2 = value
-    //   }
-    //   else if ( value === "Yes3" || value === "No3" ){
-    //     state.question3 = value
-    //   }
-    // },
     changeGenderValue(state, value){
       state.gender = value
     },

@@ -39,7 +39,6 @@ export default {
     question1: function(){
       return this.$store.getters.question1
     },
-
     question2: function(){
       return this.$store.getters.question2
     },
