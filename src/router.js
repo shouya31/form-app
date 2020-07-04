@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import BasicInformationPage from '@/components/modules/BasicInformationPage'
 import QuestionnairePage from '@/components/modules/QuestionnairePage'
 import ConsultationPage from '@/components/modules/ConsultationPage'
+import ConfirmationPage from '@/components/modules/ConfirmationPage'
+
 
 Vue.use(Router)
 
@@ -21,6 +23,10 @@ export default new Router({
     {
       path: '/consultation',
       component: ConsultationPage
-    }
+    },
+    {
+      path: '/confirmation',
+      component: ConfirmationPage
+    },
   ]
 })
