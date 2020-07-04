@@ -24,6 +24,8 @@
       <p>-ご相談内容</p>
       <p>{{ writeText }}</p>
     </div>
+    <button>送信</button>
+    <button @click="$router.go(-1)">戻る</button>
   </div>
 </template>
 
